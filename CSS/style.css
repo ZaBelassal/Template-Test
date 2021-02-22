@@ -1,0 +1,358 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* yé3ni méli kandir lpadding makizidshh 3Lih kib9a lwidth huwa huwa */
+}
+.container{
+    width:80%;
+    margin:auto;
+}
+.header{
+    position:fixed;
+    z-index: 10;
+    width:100%;
+}
+.header .logo {
+    width:40%;
+    float:left;
+}
+.header .nav {
+    width:60%;
+    float:right;
+    list-style: none;
+    text-align:right;
+   
+}
+.header .nav > li {
+  
+  display:inline-block; 
+
+}
+
+.dropdown{
+    position:relative;
+}
+.dropdown-menu{
+    position:absolute;
+    background-color:#6195ff;
+    width:150px;
+    text-align:center;
+    left:-50%;
+    top:70%;
+    opacity: 0;
+    visibility:hidden;
+    transition:opacity 0.5s, visibility;
+}
+.dropdown-menu a {
+    color:#fff;
+    display:block;
+    padding:10px;
+}
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility: visible;
+}
+
+a{
+    text-decoration: none;
+    padding: 30px 15px;
+    display: block;
+}
+/*.header-content{ overflow: hidden; /* solution dial float left */
+
+
+
+.header .nav > li > a {
+    color:#fff;
+}
+/*Home Section */
+
+.home{
+    height:100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    position:relative;
+}
+
+.home .title{
+    color:red
+}
+
+.home-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.7) /* Hadak lparametre lékhrani huwa lopacité */
+}
+.clear{
+    clear:both
+}
+
+/* Header-section */
+.section-header{
+    margin-bottom: 30px;
+}
+
+.pd-y {
+    margin-top: 50;
+    margin-bottom: 50;
+}
+.section-title{
+    text-transform:capitalize;
+    text-align:center
+}
+.line{        /* hada élément inline maghadish ibann kahssna ndirolih display block bash iban */
+    width :130px;
+    height:5px;
+    margin:auto;
+    background-color:#6195ff;
+    display:block
+}
+
+.about.item{
+    text-align:center;
+    width:30%;
+    float:left;
+    padding:50px 20px;
+    border:1px solid ; 
+}
+.about-content{
+    overflow: hidden;
+}
+.about.item.img {
+    margin:0 5%;
+
+}
+.ltr-effect{
+    position : relative
+}
+.ltr-effect:after {
+    position:absolute;
+    content:"";
+    width:0%;
+    height:100%;
+    top:0;
+    left:0;
+    background:#6195ff;
+    transition : width 0.5s;
+    
+}
+.ltr-effect:hover:after{
+    width:100%
+}
+
+/* Portfolio Section */ 
+
+.Portfolio-content{
+    overflow:hidden
+}
+.Portfolio.item{
+    float:left;
+    width:30%;
+    margin-bottom:30px;
+    position:relative;
+    padding:20px;
+}
+.Portfolio.item img{
+    width:100%
+}
+.Portfolio.item.mg{
+    margin:0 5% ;
+}
+.ttb-effect{
+    position : relative
+}
+.ttb-effect:after{
+    position:absolute;
+    content:"";
+    width:100%;
+    height:0%;
+    right:0;
+    top:0;
+    background:#6195ff;
+    transition:height 0.5s;
+    z-index:-1;
+}
+.ttb-effect:hover:after {
+    height:100%;
+}
+.layer-content {
+    background-color:rgba(0,0,0,0.7);
+    position : absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+}
+.layer-info{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    text-align:center
+}
+.Portfolio.item:hover .layer-content{
+    opacity:1
+}
+.offer-content{
+    overflow:hidden;
+    text-align:center /* yeé3ni koulshi kiji lwaésst */
+}
+.offer-item{
+    width:30%;
+    float:left;
+    margin-bottom: 20px;
+}
+.offer-item.mg{
+    margin:0 5%;
+}
+.offer-item:hover .offer-item-title{   /* kandir hover l title bu7du */
+    color:white
+}
+
+/* Overlay */
+.number{
+    position:relative;
+}
+
+/*Pricing Section */
+
+.pricing-title{
+    text-align:center
+}
+.pricing-items{
+    overflow:hidden;
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.pricing-item{
+    border:solid;
+    float:left;
+    width:30%;
+    padding-bottom: 40px;
+}
+.pricing-item.mg{
+    margin-left:5%;
+    margin-right:5%;
+}
+.pricing-list-item{
+    list-style:none
+}
+.cercle{
+    border-radius:80px;
+    height:100px;
+    width:100px;
+    padding:40px 0;
+    border:2px solid#6195ff;
+    text-align:center;    /* ayi élément text baghi tréddo lwésst kadir text-align:center */
+    margin: 15px auto;    /* dima ayi élément fih lwidth bash katrédo lwésst kaddir margin:auto*/
+
+}
+.btn-submit{
+    margin:10px;
+    padding:5px;
+    height:30px;
+    border-radius:5px;
+    border:2px solid #6195ff;
+}
+.pricing-item:hover .pricing-item-title{
+    color:white;
+}
+.pricing-item:hover .cercle{
+    border:2px solid white;
+}
+
+/* testimonial Section */
+.testimonial-section{
+    position: relative;
+    background-image: url(../images/background/background3.webp);
+    background-attachment:fixed ;
+    height: 400px;
+}
+.testimonial-content{
+    overflow:hidden
+}
+.testimional-item{
+    float:left;
+    width: 50%;
+    color:white
+}
+
+.team-header{
+    text-align:center
+}
+.team-content{
+    overflow:hidden;
+}
+.team-item{
+    float:left;
+    width:30%;
+    background:#e8e8e8;
+    padding:20px 5px;
+    
+}
+.team-item .team-img{
+    width:90%;
+    margin:auto;
+    position:relative;   /* makandiroush absolute , kandiro relative bash ijiwna fo9hum */
+    background: rgba(0,0,0,0.5);
+}
+.team-item .team-img img{                   /* img mashi .img la7é9ash class mé3roufa */
+    width:100%;
+}
+.team-item-mg{
+    margin-right:5%;
+    margin-left:5%;
+    width:30%;
+    float:left;
+    background:#e8e8e8;
+    padding:20px 5px;
+}
+.team-item-mg .team-img{
+    width:90%;
+    margin:auto;
+  
+}
+.team-item-mg .team-img img{
+    width:100%;
+}
+.team-info{
+    text-align:center;
+}
+.team-overlay{
+position:absolute;
+top:0;
+right:0;
+left:0;
+bottom:0; /* Bash mayb9ash ibanli dik la liste */
+visibility: hidden;
+opacity:1 ;
+}
+.team-overlay a {
+    background:cyan;
+    border:0.5px solid;
+    width:40px;
+    height:40px;
+    display:block;
+    margin-left:auto; /* Typique fles entretiens Hadik l3ayba dial lblock kanét par défault 
+                         flissér kanhézouha o kan7éttouha flimén*/
+}
+.team-item:hover .team-overlay{
+    visibility:visible;
+    opacity:1;
+    background:rgba(0,0,0,0.5);
+}
+.team-item:hover .team-item .team-img{
+    background: rgba(0,0,0,0.5);
+}
